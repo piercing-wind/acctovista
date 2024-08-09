@@ -1,31 +1,26 @@
 import { Divider } from "@/components/divider";
 import { formatDate } from "@/components/frontPageBlogPreview";
 import { Header } from "@/components/header";
-import { BlogObject } from "@/model/blog";
+import connectToMongoDB from "@/lib/mongodb";
+import Blog, { BlogObject } from "@/model/blog";
 import { Metadata } from "next";
 import Link from "next/link";
 
 
 export async function generateStaticParams() {
-   const response = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/blog`,{
-         method : 'GET',
-         headers: {
-            acctovista: process.env.NEXT_PUBLIC_ACCTOVISTA_KEY!
-         }
-      });
-      const  blogs :BlogObject[] = await response.json();
+   await connectToMongoDB();
+   const blogs  :BlogObject[] = await Blog.find({});
+   return blogs.map(({_id})=> _id).slice(0,30)
 
-      return blogs.map(({_id})=> _id).slice(0,30)
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) : Promise<Metadata>{
-   const response = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/blog?id=${params.id}`,{
-      method : 'GET',
-      headers: {
-         acctovista: process.env.NEXT_PUBLIC_ACCTOVISTA_KEY!
-      }
-   })
-   const blog = await response.json();
+   await connectToMongoDB();
+
+   const blog : BlogObject | null = await Blog.findById(params.id);
+   if (!blog) {
+      throw new Error('Blog not found');
+   }
    return{
       title: blog.title,
       description: blog.description,
@@ -40,13 +35,13 @@ export async function generateMetadata({ params }: { params: { id: string } }) :
 }
 
 const Page=async ({ params }: { params: { id: string } })=>{
-   const response = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/blog?id=${params.id}`,{
-      method : 'GET',
-      headers: {
-         acctovista: process.env.NEXT_PUBLIC_ACCTOVISTA_KEY!
-      }
-   })
-   const blog = await response.json();
+   await connectToMongoDB();
+
+   const blog : BlogObject | null = await Blog.findById(params.id);
+   if (!blog) {
+      throw new Error('Blog not found');
+   }
+   // console.log(blog)
    const styledContent = `
     <style>
       .styled-content {
