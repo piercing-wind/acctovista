@@ -1,0 +1,21 @@
+{
+   "name": "Acctovista",
+   "short_name": "Acctovista",
+   "description": "Future Driven KPO; Leveraging Technology to enhance your business",
+   "start_url": "/",
+   "display": "standalone",
+   "background_color": "#ffffff",
+   "theme_color": "#000000",
+   "icons": [
+     {
+       "src": "https://d11wbp5a59q34o.cloudfront.net/public/Logo.svg",
+       "sizes": "192x192",
+       "type": "image/png"
+     },
+     {
+       "src": "https://d11wbp5a59q34o.cloudfront.net/public/Logo.svg",
+       "sizes": "256x256",
+       "type": "image/x-icon"
+     }
+   ]
+ }

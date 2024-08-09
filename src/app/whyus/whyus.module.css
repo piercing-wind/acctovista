@@ -1,0 +1,9 @@
+.d{
+   color :rgba(165, 249, 9, 0.984)
+}
+.divider {
+   position: relative;
+   border-image: linear-gradient(to right, #f12711, #f5af19, #41f519, #1151f1) 1;
+   border-image-slice: 1;
+}
+ 

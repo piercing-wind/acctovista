@@ -1,0 +1,129 @@
+.shine {
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1000ms infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+/* Link hover */
+.logoglow {
+   text-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+   0 0 40px #ffffff;
+ }
+
+.link {
+  position: relative;
+}
+.link:hover {
+  text-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+    0 0 40px #ffffff;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 5px;
+   /*f68712 3871c1 40b93c  */
+  background-image: linear-gradient(to right,  #ab5d0a 0%, #944d01 33%, #264d85 33%, #264578 66%, #40b93c 66%, #40b93c 100%);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Active link */
+.activeLink {
+   position: relative;
+   text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff, 0 0 10px #ffffff;
+ }
+ 
+ .activeLink::before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   border-radius: 5px;
+   background-image: linear-gradient(to right, #ab5d0a 0%, #944d01 33%, #264d85 33%, #264578 66%, #40b93c 66%, #40b93c 100%);
+   bottom: 0;
+   left: 0;
+   transform-origin: left;
+   transform: scaleX(1);
+   transition: transform 0.3s ease-in-out;
+ }
+
+
+.servicesMenu:hover {
+   /* text-shadow: 0 0 2px #84baca, 0 0 15px #b6ced6, 0 0 25px #dbdbdb,
+     0 0 200px #f4f6f6; */
+   color : #f68712
+   }
+/* header */
+
+
+
+
+
+
+
+
+
+
+/* for the srvice pages */
+.serviceLink {
+   position: relative;
+}
+
+.serviceLink::before {
+   content: "";
+   position: absolute;
+   width: 80%; /* Adjust the width as needed */
+   height: 1px;
+   border-radius: 5px;
+   background-image: linear-gradient(to right, #f56010 0%, #f56010 33%, #264d85 33%, #264578 66%, #40b93c 66%, #40b93c 100%);
+   bottom: 0;
+   left: 10%;
+   right: 10%;
+   transform-origin: right;
+   transform: scaleX(0);
+   transition: transform 0.3s ease-in-out;
+}
+
+.serviceLink:hover::before {
+   transform-origin: left;
+   transform: scaleX(1);
+}
+
+
+
+.scroll_container::-webkit-scrollbar {
+   display: none;
+ }
+ 
+ /* Hide scrollbar for IE, Edge and Firefox */
+ .scroll_container {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
