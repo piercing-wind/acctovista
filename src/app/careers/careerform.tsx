@@ -1,8 +1,6 @@
 'use client';
 import { uploadToS3 } from '@/lib/aws';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import AWS from 'aws-sdk';
-
 
 interface FormData {
   name: string;
@@ -20,15 +18,9 @@ interface FormErrors {
   [key: string]: string;
 }
 
-AWS.config.update({
-   region: 'ap-south-1', // Your region
-   accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID,
-   secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY,
- });
-
 const CareerForm: React.FC = () => {
-
-   const s3 = new AWS.S3();
+   const [submitted, setSubmitted] = useState<boolean>(false);
+   const [loading, setLoading] = useState<boolean>(false);
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -70,31 +62,23 @@ const CareerForm: React.FC = () => {
 
   const handleSubmit =async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
       if(formData.resume){
          try{
-            const file = formData.resume;
-            const uploadFile =async (file : any) => {
-                 const params = {
-                   Bucket: 'acctovista',
-                   Key: `uploads/${file.name}`,
-                   Body: file,
-                   ContentType: file.type,
-                 };
+            const file = formData.resume as File;
+            const uploadData = await uploadToS3(file.name, file.size, file.type, formData.email);
 
-                 s3.upload(params, (err : any, data : any ) => {
-                   if (err) {
-                     console.error('Error uploading file:', err);
-                   } else {
-                     console.log('File uploaded successfully:', data);
-                   }
-                 });
-               };
-
-            uploadFile(file)
+            const res = await fetch(uploadData.signedUrl,{
+               method : 'PUT',
+               body : file,
+               headers : {
+                  'Content-Type' : file.type
+               }
+            })
 
             const response = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL as string}/api/careers`,{
                method : 'POST',
@@ -104,26 +88,39 @@ const CareerForm: React.FC = () => {
                },
                body : JSON.stringify({
                   ...formData,
-                  resume : `https://d11wbp5a59q34o.cloudfront.net/" + ${"uploadData.fileKey"}`,
-                  fileKey : "uploadData.fileKey"
+                  resume : uploadData.downloadUrl,
+                  fileKey : uploadData.fileKey
                })
             })
             if(response.status === 201){
-               alert('We have received your application. We will get back to you soon. Thank you!');
+               setLoading(false);
+               setSubmitted(true);
             }
-
          }catch(e){
             console.log(e);   
          }
       }
-
-
-      // Handle form submission logic here
-      console.log(formData);
     }
   };
 
   return (
+   <>
+      { submitted ? (<div className="max-w-lg mx-auto my-8 p-6 bg-white rounded-lg shadow-lg">
+        <h1 className="text-2xl font-semibold text-teal-600 mb-4">Dear {formData.name},</h1>
+        <p className="text-base leading-relaxed mb-4">Thank you for taking the time to submit your resume for the {formData.position !== "" ? formData.position : formData.customPosition} at <b>Acctovista Consulting LLP</b>. We appreciate your interest in joining our team.</p>
+        <p className="text-base leading-relaxed mb-4">Our recruitment team is currently reviewing all applications, and we will be in touch with you shortly regarding the next steps in the process.</p>
+        <p className="text-base leading-relaxed mb-4">If you have any questions in the meantime, please feel free to reach out to us.</p>
+        <p className="text-base leading-relaxed mb-4">Thank you once again for your interest in <b>Acctovista Consulting LLP</b>. We look forward to the possibility of working together.</p>
+        <div className="mt-6">
+            <p className="text-base font-medium">Best regards,</p>
+            <p className="text-base">Team Acctovista</p>
+        </div>
+        <div className="mt-6 text-center text-sm text-gray-600">
+            <p>&copy; 20204 Acctovista Consulting. All rights reserved.</p>
+            <p><a href="mailto:info@acctovista.com" className="text-teal-600">info@acctovista.com</a></p>
+        </div>
+      </div> 
+    ):(
     <div className="w-[95%] lg:w-[70%] mx-auto my-20 p-8 bg-white shadow-lg rounded-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Join Us at AcctoVista</h2>
       <p className="text-lg mb-8 text-center">Shape Your Future with Us, Create Opportunities and Your Favored Work Culture</p>
@@ -273,6 +270,7 @@ const CareerForm: React.FC = () => {
           ></textarea>
         </div>
         <button
+        disabled={loading}
           type="submit"
           className="w-full py-3 px-6 text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-300"
         >
@@ -280,6 +278,8 @@ const CareerForm: React.FC = () => {
         </button>
       </form>
     </div>
+    )}
+    </>
   );
 };
 

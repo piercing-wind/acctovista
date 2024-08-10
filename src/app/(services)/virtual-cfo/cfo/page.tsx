@@ -110,13 +110,13 @@ const Page = ()=>{
     ];
 
     const softwares = [
-      { src: '/services/softwares/Fathom.svg', alt: 'QuickBooks',  width: '10rem', height: '10rem' },
-      { src: '/services/softwares/Jirav.svg', alt: 'Zoho', width: '8rem', height: '8rem' },
-      { src: '/services/softwares/Logicgate.svg', alt: 'Bill', width: '12rem', height: '8rem' },
-      { src: '/services/softwares/Excel.svg', alt: 'Microsoft Dynamics 365', width: '6rem', height: '6rem' },
-      { src: '/services/softwares/Power_BI.svg', alt: 'Xero', width: '7rem', height: '7rem' },
-      { src: '/services/softwares/Resolver.svg', alt: 'Xero', width: '10rem', height: '10rem' },
-      { src: '/services/softwares/Tableau.svg', alt: 'Xero', width: '10rem', height: '10rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Fathom.svg', alt: 'QuickBooks',  width: '10rem', height: '10rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Jirav.svg', alt: 'Zoho', width: '8rem', height: '8rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Logicgate.svg', alt: 'Bill', width: '12rem', height: '8rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Excel.svg', alt: 'Microsoft Dynamics 365', width: '6rem', height: '6rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Power_BI.svg', alt: 'Xero', width: '7rem', height: '7rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Resolver.svg', alt: 'Xero', width: '10rem', height: '10rem' },
+      { src: 'https://d11wbp5a59q34o.cloudfront.net/public/services/softwares/Tableau.svg', alt: 'Xero', width: '10rem', height: '10rem' },
     ];
    return(
       <>

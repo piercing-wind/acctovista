@@ -112,7 +112,7 @@ export default function RootLayout({
                   <Linkdin />
                  <Link href="https://www.instagram.com/acctovista/"> <Instagram/></Link>
                  <Link href="https://www.youtube.com/@AcctovistaConsulting"> <Youtube/></Link>
-                 <Link href="https://www.facebook.com/share/qKYaRCRQdCp15Gdk/?mibextid=qi2Omg"><FaceBook/></Link>
+                 <Link href="https://www.facebook.com/people/Acctovista-Consulting/61563638683925/?checkpoint_src=any"><FaceBook/></Link>
                </div>
             </div>   
             </div>

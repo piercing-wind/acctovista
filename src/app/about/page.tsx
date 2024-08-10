@@ -75,7 +75,7 @@ const Page = () => {
      </div>
          <div className="w-full relative h-[35rem] overflow-hidden bg-black bg-opacity-50 flex flex-col gap-8 items-center justify-center">
             <Image 
-            src='https://d11wbp5a59q34o.cloudfront.net/public/careers/aboutWhyus.png'
+            src='https://d11wbp5a59q34o.cloudfront.net/public/aboutWhyus.png'
             alt="why us"
             fill
             style={{
