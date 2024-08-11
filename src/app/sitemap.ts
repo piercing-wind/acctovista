@@ -1,8 +1,20 @@
+import connectToMongoDB from "@/lib/mongodb";
+import Blog, { BlogObject } from "@/model/blog";
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
    const lastModified = new Date();
- 
+
+   await connectToMongoDB();
+   const blogs  :BlogObject[] = await Blog.find({});
+
+   const BlogPaths : MetadataRoute.Sitemap = blogs.map(({_id, date})=> (
+      {
+         url : `https://acctovista.com/blog/${_id}`,
+         lastModified : date,
+         changeFrequency : 'weekly',
+      }
+   ))
    return [
      {
        url: 'https://acctovista.com',
@@ -14,10 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
      },
      {
        url: 'https://acctovista.com/blog',
-       lastModified,
-     },
-     {
-       url: 'https://acctovista.com/blog/[id]',
        lastModified,
      },
      {
@@ -120,6 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
        url: 'https://acctovista.com/services/virtual-cfo/cfo',
        lastModified,
      },
+     ...BlogPaths,
    ];
  }
  

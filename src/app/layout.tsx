@@ -109,10 +109,10 @@ export default function RootLayout({
                </div>
                   <span>Connect with Us</span>
                <div className="mt-5 flex gap-10">
-                  <Linkdin />
-                 <Link href="https://www.instagram.com/acctovista/"> <Instagram/></Link>
-                 <Link href="https://www.youtube.com/@AcctovistaConsulting"> <Youtube/></Link>
-                 <Link href="https://www.facebook.com/people/Acctovista-Consulting/61563638683925/?checkpoint_src=any"><FaceBook/></Link>
+                 <Link target="_blank" href="https://www.linkedin.com/company/acctovista-consulting"><Linkdin /></Link>
+                 <Link target="_blank" href="https://www.instagram.com/acctovista/"> <Instagram/></Link>
+                 <Link target="_blank" href="https://www.youtube.com/@AcctovistaConsulting"> <Youtube/></Link>
+                 <Link target="_blank" href="https://www.facebook.com/people/Acctovista-Consulting/61563638683925/?checkpoint_src=any"><FaceBook/></Link>
                </div>
             </div>   
             </div>

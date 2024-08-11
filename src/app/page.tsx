@@ -100,7 +100,7 @@ export default function Home() {
       author : "AcctoVista",
       date : "5 August 2024",
       description : "In today's fast-paced business environment, the need for outsourcing has never been more pronounced",
-      link : "/66b08f27894800c0bcd4d114"
+      link : "/66b08f74894800c0bcd4d117"
 
       },
       {
@@ -110,7 +110,7 @@ export default function Home() {
       author : "AcctoVista",
       date : "5 August 2024",
       description : "The accounting industry, traditionally known for its meticulousness and precision, is undergoing a seismic shift.",
-      link : "/66b08f74894800c0bcd4d117"
+      link : "/66b08f27894800c0bcd4d114"
       },
 ]
 
