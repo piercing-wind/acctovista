@@ -51,7 +51,7 @@ export const FAQ=({faqData}:{faqData : Array<{question: string, answer: string}>
                ))}
                </div>
 
-               <div className="relative h-[20rem] w-[25rem] md:w-[30rem] mx-4">
+               <div className="relative h-[19rem] w-[23rem] md:w-[30rem] mx-4 -mt-4">
                   <Image
                   src="https://d11wbp5a59q34o.cloudfront.net/public/faq.png"
                   alt="FAQ"

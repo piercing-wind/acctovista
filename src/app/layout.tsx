@@ -7,10 +7,11 @@ import Image from "next/image";
 import { FaceBook, Instagram, Linkdin, Youtube } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { FooterServiceList } from "@/components/footerServiceLink";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-   title: "Acctovitsa",
+   title: "Acctovitsa Consulting LLP",
    metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL || "https://acctovista.com"),
    description:"Future Driven KPO; Leveraging Technology to enhance your business",
    applicationName: "Acctovitsa", 
@@ -35,14 +36,14 @@ export const metadata: Metadata = {
    openGraph:{
       type : 'website',
       // url : website,
-      title : "Acctovista",
-      siteName : "Acctovista",
+      title : "Acctovista Consulting LLP",
+      siteName : "Acctovista Consulting LLP",
       images:[
          {
-            url : "/opengraph-image.jpg",
+            url : "https://d11wbp5a59q34o.cloudfront.net/public/opengraph-image.jpg",
             height : 630,  
             width : 1200,
-            alt : "Welcome to Acctovista"
+            alt : "Welcome to Acctovist   a"
          }
       ],
       description : "Experience the best in AI with our comprehensive solutions. Generate stunning images with DALL-E and SDXL, create professional presentations from any document, transform text into high-quality audio, and quickly summarize PDFs. Enhance your productivity with our advanced AI tools.",
@@ -62,6 +63,19 @@ export default function RootLayout({
   return (
 
     <html lang="en"  className="w-full hide_scrollbar">
+     <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Acctovista Consulting LLP",
+              "url": "https://acctovitsa.com/",
+            }),
+          }}
+        />
+      </Head>
       <body className={cn("hide_scrollbar",inter.className)} >
          {children}
          <div className="w-full relative flex flex-col overflow-x-hidden">

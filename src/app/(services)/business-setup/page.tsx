@@ -28,7 +28,7 @@ const Page=()=>{
             title="Business Setup In India"
             text1="Setting up business in India is game-changing for foreign multinationals due to its booming economy, expected to become the third-largest globally by 2030. The country's youthful demographic, with over 65% of the population under 35, creates a dynamic market for consumer goods and services. Moreover, India's favorable FDI policies, competitive labour costs, and strategic initiatives like 'Make in India' drive high returns on investment and significant profit generation for foreign companies."
             link="/business-setup/business-setup-in-india"
-            img="/services/BusinessSetupinIndia.jpg"
+            img="https://d11wbp5a59q34o.cloudfront.net/public/services/BusinessSetupinIndia.jpg"
             alt="Business SetUp"
           />
       

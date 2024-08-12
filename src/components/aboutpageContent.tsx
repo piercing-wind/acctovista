@@ -20,8 +20,8 @@ export const AboutPageContent1 = () => {
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <LeadershipandExpertise size={80} />
-          <h1 className="text-xl font-bold tracking-wide my-2 mt-4">Personalised Engagment</h1>
-          <p className="text-center brightness-200">We prioritize building strong relationships with business organizations worldwide through personalized service and tailored solutions.</p>
+          <h1 className="text-base font-bold tracking-wide my-2 mt-4">Personalised Engagment</h1>
+          <p className="text-center brightness-200 text-sm">We prioritize building strong relationships with business organizations worldwide through personalized service and tailored solutions.</p>
         </div>
       </motion.div>
 
@@ -35,8 +35,8 @@ export const AboutPageContent1 = () => {
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <Image src='https://d11wbp5a59q34o.cloudfront.net/public/Proactivecommunication.svg' alt="Icon" height={100} width={100} />
-          <h1 className="text-xl font-bold tracking-wide my-2">Proactive Communication</h1>
-          <p className="text-center">Our approach ensures open lines of communication to foster transparency and responsiveness</p>
+          <h1 className="text-base font-bold tracking-wide my-2">Proactive Communication</h1>
+          <p className="text-center text-sm">Our approach ensures open lines of communication to foster transparency and responsiveness</p>
         </div>
       </motion.div>
 
@@ -50,8 +50,8 @@ export const AboutPageContent1 = () => {
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <Client size={100} color="#00c4cc" />
-          <h1 className="text-xl font-bold tracking-wide my-2">Client-Centric Focus</h1>
-          <p className="text-center">We are committed to understanding and addressing the unique needs and challenges of each client.</p>
+          <h1 className="text-base font-bold tracking-wide my-2">Client-Centric Focus</h1>
+          <p className="text-center text-sm">We are committed to understanding and addressing the unique needs and challenges of each client.</p>
         </div>
       </motion.div>
     </div>
@@ -77,8 +77,8 @@ export const AboutPageContent2 =()=>{
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <Image src='https://d11wbp5a59q34o.cloudfront.net/public/partners.svg' alt="partner" height={100} width={100} />
-          <h1 className="text-xl font-bold tracking-wide my-2 text-center text-nowrap">Collaborative Partnerships</h1>
-          <p className="text-center "> Emphasizing collaboration, feedback, and continuous improvement to exceed expectations.</p>
+          <h1 className="text-base font-bold tracking-wide my-2 text-center text-nowrap">Collaborative Partnerships</h1>
+          <p className="text-center text-sm"> Emphasizing collaboration, feedback, and continuous improvement to exceed expectations.</p>
         </div>
       </motion.div>
 
@@ -92,8 +92,8 @@ export const AboutPageContent2 =()=>{
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <LongTermCommitment size={100} color="#8d5524" />
-          <h1 className="text-xl font-bold tracking-wide my-2">Long-term Commitment</h1>
-          <p className="text-center">Dedicated to fostering enduring partnerships based on trust, reliability, and delivering high-quality, value-added services.</p>
+          <h1 className="text-base font-bold tracking-wide my-2">Long-term Commitment</h1>
+          <p className="text-center text-sm">Dedicated to fostering enduring partnerships based on trust, reliability, and delivering high-quality, value-added services.</p>
         </div>
       </motion.div>
 
@@ -107,8 +107,8 @@ export const AboutPageContent2 =()=>{
       >
         <div className="-rotate-[46deg] absolute -top-8 -left-5 w-full h-full items-center justify-center flex flex-col">
           <TechnologyDriven size={100} />
-          <h1 className="text-xl font-bold tracking-wide my-2">Technology Driven</h1>
-          <p className="text-center">Transforming outsourcing with cutting-edge technology and tailored solutions worldwide.</p>
+          <h1 className="text-base font-bold tracking-wide my-2">Technology Driven</h1>
+          <p className="text-center text-sm">Transforming outsourcing with cutting-edge technology and tailored solutions worldwide.</p>
         </div>
       </motion.div>
    

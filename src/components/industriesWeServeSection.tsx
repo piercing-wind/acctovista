@@ -124,9 +124,10 @@ export const IndustriesWeServeSection = () => {
       <HandPlatter key="icon-9" className='text-lime-400' />,
     ];
  
-   return (<div className='flex flex-col'>
+   return (
+   <div className='flex flex-col'>
       <h3 className='text-3xl font-extrabold'>Industries we Catered</h3>
-     <ul ref={ref} className="mb-10 py-5 flex flex-col gap-5 text-lg sm:text-xl font-medium uppercase opacity-80">
+     <ul ref={ref} className="mb-10 py-5 flex flex-col gap-5 text-[1rem] leading-8 sm:text-xl font-medium uppercase opacity-80">
        {items.map((item, index) => (
          <motion.li
            key={item}

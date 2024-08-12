@@ -28,7 +28,7 @@ export default function SlightFlip({
       triggerOnce: false, // Change to false if you want the animation to restart every time it comes into view
     });
   return (
-    <div className="flex">
+    <div className="flex flex-wrap justify-center mx-auto pl-1">
       <AnimatePresence mode="wait">
         {word.split(" ").map((word, i) => (
           <motion.span

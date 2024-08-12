@@ -22,7 +22,7 @@ const Page = () => {
           <source src="https://d11wbp5a59q34o.cloudfront.net/public/about.mp4" type="video/mp4" />
         </video>
            <SlightFlip 
-           className="text-2xl md:text-6xl justify-start text-white font-extrabold tracking-wide md:leading-[5rem]"
+           className="text-3xl md:text-6xl justify-start text-white font-extrabold tracking-wide md:leading-[5rem]"
            word="Discover What Sets Us Apart" 
            />
       </div>
@@ -47,7 +47,7 @@ const Page = () => {
             services, we integrate a comprehensive suite of conventional and
             technology-driven solutions." duration={0.3} />
 
-          <BlurIn className="font-normal text-base text-left my-10 tracking-wide" word="This approach not only optimizes costs but also enhances operational
+          <BlurIn className="font-normal md:text-base text-left my-10 mt-5 tracking-wide leading-loose" word="This approach not only optimizes costs but also enhances operational
             efficiency, empowering our partners to achieve unparalleled levels
             of profitability. Discover how Acctovista can redefine your
             outsourcing expectations, regardless of your industry or location.
@@ -56,7 +56,7 @@ const Page = () => {
             This substantial cost-saving is a testament to our efficiency and
             dedication to optimizing operational processes for our clients." duration={0.5} />
 
-          <BlurIn className="font-normal text-base text-left my-10 tracking-wide" word="Our technology-driven solutions are not limited to Accounting,
+          <BlurIn className="font-normal md:text-base text-left my-10 mt-5 tracking-wide leading-loose" word="Our technology-driven solutions are not limited to Accounting,
             Finance, and Taxation. We also excel in providing a wide range of
             IT-enabled services, software migrations, and many other advanced
             solutions. This extensive in-house bundle of core services in

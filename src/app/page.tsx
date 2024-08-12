@@ -115,7 +115,7 @@ export default function Home() {
 ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center w-full overflow-x-hidden">
       <div className="w-full relative flex min-h-screen flex-col items-center shadow-xl">
         <Header classNameForBg="text-white fixed" />
         <video
@@ -240,24 +240,23 @@ export default function Home() {
          </div>
        </div>
          
-      <div className="w-full overflow-x-hidden relative flex flex-col items-center justify-center h-[70vh] ">
+      <div className="w-full overflow-x-hidden relative flex flex-col items-center justify-center my-10">
          <h5 className="font-medium text-2xl ">Our Team Review&apos;s</h5>
-               <EmployeeReviewsScroll/>
+         <EmployeeReviewsScroll/>
       </div>
 
-      <div className="w-full h-[105vh] p-5 sm:mx-auto flex flex-col items-center justify-center relative my-24 md:mt-0">
-         <h2 className="text-2xl font-medium mt-10">AcctoVista&apos;s Offshore Solutions</h2>
+      <div className="w-full p-5 sm:mx-auto flex flex-col items-center justify-center relative my-10 overflow-y-hidden"
+        style={{
+         backgroundImage: "url('https://d11wbp5a59q34o.cloudfront.net/public/offshoreModelBG.png')",
+         backgroundSize: "cover",
+         backgroundPosition: "center",
+         
+       }}
+     >
+         <h2 className="text-2xl font-semibold mt-10">AcctoVista&apos;s Offshore Solutions</h2>
          <p className="text-xl opacity-85 w-[95%] md:w-[70%] text-center my-10 mb-14">Optimal efficiency with our tailored offshore offerings, crafted to meet your unique business needs. Leverage our global expertise for superior performance and success.</p>
-         <Image
-            src='https://d11wbp5a59q34o.cloudfront.net/public/offshoreModelBG.png'
-            alt="Offshore Model"
-            fill
-            style={{
-               objectFit: "cover"
-            }}
-            className=" opacity-50 -z-20"
-         /> 
-         <div className="w-full h-full flex flex-col md:flex-row gap-14 justify-center">
+      
+         <div className="w-full h-full flex flex-col md:flex-row gap-14 justify-center z-30">
           <div className="md:w-[40%] h-60% relative overflow-hidden flex flex-col">
              <div className="h-[15rem] w-[15rem] -z-20 bg-purple-700 blur-3xl absolute -right-[7rem] top-0 opacity-30"/>
              <span className="text-xl font-bold mx-auto my-8 opacity-90">Outsourcing Model</span>
