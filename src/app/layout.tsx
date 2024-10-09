@@ -7,7 +7,6 @@ import Image from "next/image";
 import { FaceBook, Instagram, Linkdin, Youtube } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { FooterServiceList } from "@/components/footerServiceLink";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -50,6 +49,12 @@ export const metadata: Metadata = {
    },  
    other:{
       ["bingbot"]: "noarchive",
+      'application/ld+json': JSON.stringify({
+         "@context": "https://schema.org",
+         "@type": "WebSite",
+         "name": "Acctovista Consulting LLP",
+         "url": "https://acctovitsa.com/",
+       }),
    }
  };
 
@@ -63,19 +68,6 @@ export default function RootLayout({
   return (
 
     <html lang="en"  className="w-full hide_scrollbar">
-     <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Acctovista Consulting LLP",
-              "url": "https://acctovitsa.com/",
-            }),
-          }}
-        />
-      </Head>
       <body className={cn("hide_scrollbar",inter.className)} >
          {children}
          <div className="w-full relative flex flex-col overflow-x-hidden">
