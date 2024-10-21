@@ -137,7 +137,7 @@ export default function RootLayout({
                      <Link href="/blog">Blog</Link>
                      <Link href="/careers">Careers</Link>
                   </ul>
-                  <span className="font-semibold opacity-90 mb-5" >Policy</span>
+                  <span className="font-semibold opacity-90 my-5" >Policy</span>
                   <ul className="flex flex-col gap-2 opacity-80 text-nowrap">
                      <Link href="/privacy-policy ">Privacy Policy</Link>
                      <Link href="/terms-and-condition ">Terms & Condition</Link>
