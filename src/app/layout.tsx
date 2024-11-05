@@ -42,10 +42,10 @@ export const metadata: Metadata = {
             url : "https://d11wbp5a59q34o.cloudfront.net/public/opengraph-image.jpg",
             height : 630,  
             width : 1200,
-            alt : "Welcome to Acctovist   a"
+            alt : "Welcome to Acctovista"
          }
       ],
-      description : "Experience the best in AI with our comprehensive solutions. Generate stunning images with DALL-E and SDXL, create professional presentations from any document, transform text into high-quality audio, and quickly summarize PDFs. Enhance your productivity with our advanced AI tools.",
+      description : "Future Driven KPO; Leveraging Technology to enhance your business",
    },  
    other:{
       ["bingbot"]: "noarchive",
