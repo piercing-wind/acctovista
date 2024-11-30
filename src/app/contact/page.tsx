@@ -21,9 +21,9 @@ export default function Page() {
             }} text="Connect with Us" direction="up" classN="flex items-center justify-center leading-9" className="text-3xl mx-auto lg:text-5xl font-semibold text-white lg:px-8 brightness-200 text-center "/>
       </div>
 
-      <div className="w-[95%] md:w-[80%] mx-auto flex flex-wrap justify-center py-12 mt-4 gap-4">
+      <div className="w-[95%] md:w-[80%] mx-auto flex flex-wrap md:flex-nowrap justify-center py-12 mt-4 gap-4">
          <div>
-            <div className="max-w-xl flex flex-col gap-4 p-8 md:max-h-[40vmin] items-cente justify-center shadow-md rounded-md">
+            <div className="max-w-xl flex flex-col gap-4 p-8 md:max-h-[40vmin]  justify-center shadow-md rounded-md">
                <h2 className="text-xl font-semibold w-full text-center py-2">Business Details</h2>            
                <h3><span className="font-semibold">Legal Name</span> : Acctovista Consulting LLP</h3>
                <h3><span className="font-semibold">Address</span> : 36b, Smile Avenue, Nangli Dispensary &#40; Vrindavan Gardens &#41;, Punjab Amritsar-143008 </h3>
