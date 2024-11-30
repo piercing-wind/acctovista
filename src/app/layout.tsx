@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       ["bingbot"]: "noarchive",
       'application/ld+json': JSON.stringify({
          "@context": "https://schema.org",
-         "@type": "WebSite",
+         "@type": "Organization",
          "name": "Acctovista Consulting LLP",
          "url": "https://acctovitsa.com/",
        }),

@@ -57,7 +57,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center flex-shrink-0 max-w-2xl w-full">
       {submitted ? (
         <div className="text-center text-green-500">
           <p>Thank you for your message!</p>
