@@ -21,16 +21,27 @@ export async function POST(req : Request){
 }
 
 
-export async function GET(req : Request){
-   const header = req.headers.get("acctovista") 
-   if(header !== process.env.NEXT_PUBLIC_ACCTOVISTA_KEY){
-          return NextResponse.json({message: "Unauthorized, You are not allowed to access this route."})
+export async function GET(req: Request) {
+   const header = req.headers.get("acctovista");
+   if (header !== process.env.NEXT_PUBLIC_ACCTOVISTA_KEY) {
+       return NextResponse.json({ message: "Unauthorized, You are not allowed to access this route." });
    }
-   connectToMongoDB()
-    const contacts = await Contact.find({}).exec()
-    return NextResponse.json(contacts)
-}
 
+   const url = new URL(req.url);
+   const page = parseInt(url.searchParams.get('page') || '1', 10);
+   const limit = 10;
+   const skip = (page - 1) * limit;
+
+   connectToMongoDB();
+   const contacts = await Contact.find({}).sort({ createdAt: -1 }).skip(skip).limit(limit).exec();
+   const totalContacts = await Contact.countDocuments({});
+
+   return NextResponse.json({
+       contacts,
+       totalPages: Math.ceil(totalContacts / limit),
+       currentPage: page
+   });
+}
 export async function DELETE(req : Request){
    const header = req.headers.get("acctovista") 
    if(header !== process.env.NEXT_PUBLIC_ACCTOVISTA_KEY){
