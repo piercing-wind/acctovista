@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
         <p>Acctovista Consulting LLP</p>
         <br/>
         <p>Email: <Link href="mailto:info@acctovista.com">info@acctovista.com</Link> </p>
-        <p>Phone: <Link href="tel:+16466654881"> +1  &#40; 646 &#41; 665-4881</Link> </p>
+        <p>Phone: <Link href="tel:+16467571155"> +1  &#40; 646 &#41; 757-1155</Link> </p>
         <p>Address: 418, Broadway #4160 , Albany, New York-12207.</p>
 
       </div>

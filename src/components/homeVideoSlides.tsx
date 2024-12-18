@@ -44,12 +44,21 @@ export const HomeVideoSlides = () => {
         className="w-full h-[80vh] flex flex-col items-center justify-center"
       >
         <h1 className="text-3xl lg:text-5xl font-bold text-white lg:w-[70%] text-wrap mb-20">{textLines[currentTextIndex]}</h1>
+       <div className="flex items-center gap-4">
         <Link href={links[currentTextIndex]} className={`text-white font-2xl font-medium p-2 my-8 border rounded-full flex items-center justify-between w-[10rem] border-yellow-200  bg-opacity-50 ${hover && 'border-yellow-500 text-yellow-500'}`}
          onMouseEnter={() => setHover(true)}
          onMouseLeave={() => setHover(false)}
          >
             View Service 
-         <span className={`p-1 rounded-full bg-yellow-900 ${hover && 'bg-yellow-500 text-white'}`}><Plus size={15}/></span></Link>
+         <span className={`p-1 rounded-full bg-yellow-900 ${hover && 'bg-yellow-500 text-white'}`}><Plus size={15}/></span>
+        </Link>
+        <Link href="/contact" className={`text-neutral-900 font-2xl text-center font-medium p-2 my-8 border rounded-full flex items-center justify-center w-[10rem] bg-yellow-500 ${hover && 'bg-opacity-50 text-neutral-50'}`}
+         onMouseEnter={() => setHover(true)}
+         onMouseLeave={() => setHover(false)}
+         >
+            Request Service
+        </Link>
+       </div>
       </motion.div>
     </div>
   );

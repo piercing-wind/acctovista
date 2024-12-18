@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
         <p>Clients may request to cancel services within a specified period as outlined below:</p>
         <ul className="list-disc ml-5">
           <li>Before Service Commencement: If you wish to cancel your service request before the services have commenced, you may do so without incurring any cancellation fees.</li>
-          <li>After Service Commencement: If you wish to cancel after the services have commenced, you must provide written notice to us at least +1  &#40; 646 &#41; 665-4881 days in advance. A cancellation fee of 5% of the total service fee may apply. This policy applies to both domestic and international clients.</li>
+          <li>After Service Commencement: If you wish to cancel after the services have commenced, you must provide written notice to us at least +1  &#40; 646 &#41; 757-1155 days in advance. A cancellation fee of 5% of the total service fee may apply. This policy applies to both domestic and international clients.</li>
         </ul>
         <h4 className="my-2 text-xl font-medium">1.2 Cancellation by Acctovista Consulting LLP</h4>
         <p>We reserve the right to cancel services for any reason, including but not limited to:</p>
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         <p>Refunds may be issued under the following circumstances:</p>
         <ul className="list-disc ml-5">
           <li>Service Not Rendered: If a service has not been provided after payment has been made, you are eligible for a full refund.</li>
-          <li>Dissatisfaction with Services: If you are not satisfied with the quality of our services, you may submit a request for a refund within +1  &#40; 646 &#41; 665-4881 days of service delivery. Your request must include a detailed explanation of the reasons for your dissatisfaction. We will review your request and determine if a refund is warranted based on our assessment of the situation.</li>
+          <li>Dissatisfaction with Services: If you are not satisfied with the quality of our services, you may submit a request for a refund within +1  &#40; 646 &#41; 757-1155 days of service delivery. Your request must include a detailed explanation of the reasons for your dissatisfaction. We will review your request and determine if a refund is warranted based on our assessment of the situation.</li>
         </ul>
         <h4 className="my-2 text-xl font-medium">2.2 Non-Refundable Fees</h4>
         <p>Certain fees may be non-refundable, including but not limited to:</p>
@@ -42,11 +42,11 @@ export default function PrivacyPolicyPage() {
         <h3 className="my-4 text-2xl font-medium">3. Refund Process</h3>
         <p>To initiate a refund request, please follow these steps:</p>
         <ul className="list-disc ml-5">
-          <li>Contact us via email at &#91; info@acctovista.com &#93; or by phone at &#91; +1  &#40; 646 &#41; 665-4881 &#93;.</li>
+          <li>Contact us via email at &#91; info@acctovista.com &#93; or by phone at &#91; +1  &#40; 646 &#41; 757-1155 &#93;.</li>
           <li>Provide your details, including your name, contact information, and the service for which you are requesting a refund.</li>
           <li>Include a description of the reason for the refund request.</li>
         </ul>
-        <p>We will process your request within +1  &#40; 646 &#41; 665-4881 business days. Once approved, refunds typically take 5-7 working days to be credited to the customer&apos;s bank account.</p>
+        <p>We will process your request within +1  &#40; 646 &#41; 757-1155 business days. Once approved, refunds typically take 5-7 working days to be credited to the customer&apos;s bank account.</p>
         <h3 className="my-4 text-2xl font-medium">4. Changes to this Policy</h3>
         <p>We reserve the right to modify this Cancellation and Refund Policy at any time. We will notify you of any changes by updating the effective date at the top of this policy. Your continued use of our services following any changes constitutes your acceptance of the revised policy.</p>
         <br/>
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
         <br/>
         <p>Acctovista Consulting LLP</p>
         <p>Email: <Link href="mailto:info@acctovista.com">info@acctovista.com</Link> </p>
-        <p>Phone: <Link href="tel:+16466654881"> +1  &#40; 646 &#41; 665-4881</Link> </p>
+        <p>Phone: <Link href="tel:+16467571155"> +1  &#40; 646 &#41; 757-1155</Link> </p>
         <p>Address: 418, Broadway #4160 , Albany, New York-12207.</p>
 
       </div>

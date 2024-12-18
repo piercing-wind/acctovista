@@ -109,7 +109,7 @@ export default function RootLayout({
                <div className="my-5 opacity-75 flex flex-col gap-1">
 
                   <p className="text-sm"><span className="font-semibold">Email: </span>&nbsp;<Link href="mailto:info@acctovista.com">info@acctovista.com</Link></p>
-                  <p className="text-sm"><span className="font-semibold">Contact: </span>&nbsp;<Link href="tell:+16466654881">+1 &#40; 646 &#41; 665-4881</Link></p>
+                  <p className="text-sm"><span className="font-semibold">Contact: </span>&nbsp;<Link href="tell:+16467571155">+1 &#40; 646 &#41; 757-1155</Link></p>
                   <p className="text-sm"><span className="font-semibold">Contact: </span>&nbsp;<Link href="tell:+917986667336">+91 79866-67336</Link></p>
 
                </div>
