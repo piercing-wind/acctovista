@@ -39,11 +39,10 @@ const ContactData = () => {
                     'acctovista': process.env.NEXT_PUBLIC_ACCTOVISTA_KEY!
                 }
             });
-            if (res.status === 204) {
+            if (res.status === 200) {
                 alert('Contact Deleted Successfully');
             } else {
                 alert('Error Deleting the Contact');
-                console.error('Error Deleting the Contact:', res);
             }
         }
     };

@@ -52,10 +52,7 @@ export const HomeVideoSlides = () => {
             View Service 
          <span className={`p-1 rounded-full bg-yellow-900 ${hover && 'bg-yellow-500 text-white'}`}><Plus size={15}/></span>
         </Link>
-        <Link href="/contact" className={`text-neutral-900 font-2xl text-center font-medium p-2 my-8 border rounded-full flex items-center justify-center w-[10rem] bg-yellow-500 ${hover && 'bg-opacity-50 text-neutral-50'}`}
-         onMouseEnter={() => setHover(true)}
-         onMouseLeave={() => setHover(false)}
-         >
+        <Link href="/contact" className={`text-neutral-900 font-2xl text-center font-medium p-2 my-8 border rounded-full flex items-center justify-center w-[10rem] bg-yellow-500  hover:bg-opacity-50 hover:text-neutral-50`}>
             Request Service
         </Link>
        </div>

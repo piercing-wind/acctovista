@@ -55,7 +55,6 @@ export async function DELETE(req : Request){
    connectToMongoDB()
    try {
       const objectId = new mongoose.Types.ObjectId(id);
-      console.log(`Converted ObjectId: ${objectId}`);
 
       const result = await Contact.deleteOne({ _id: objectId });
       if(result.deletedCount === 0 || result === null){
