@@ -31,10 +31,13 @@ export const Header = ({classNameForBg}: {classNameForBg?: string}) => {
 
       <div className="w-[80%] xl:w-[35rem] hidden md:flex items-center justify-center gap-x-10 h-24 text-lg gap-10 brightness-200">
          <ServiceDropdown/>
-         <Link href={"/blog"} className={`${CSS.link} ${pathname === '/blog' && CSS.activeLink}`}>Blog</Link>
          <About />
-         <Link href={"/careers"} className={`${CSS.link} ${pathname === '/careers' && CSS.activeLink}`}>Careers</Link>
-         <Link href={"/contact"} className={`${CSS.link} ${pathname === '/contact' && CSS.activeLink}`}>Contact Us</Link>
+         <Link href={"/blog"} className={`${CSS.link} ${pathname === '/blog' && CSS.activeLink}`}>Blog</Link>
+         {/* <Link href={"/careers"} className={`${CSS.link} ${pathname === '/careers' && CSS.activeLink}`}>Careers</Link> */}
+         {/* <Link href={"/contact"} className={`${CSS.link} ${pathname === '/contact' && CSS.activeLink}`}>Contact Us</Link> */}
+         <Link href="/contact#contactform" className={`text-black text-center font-bold p-2 rounded-full flex items-center justify-center w-[10rem] bg-yellow-500  hover:bg-opacity-90  `}>
+            Request Service
+        </Link>
       </div>
 
          <div className="absolute left-2 -bottom-2 md:hidden">
@@ -49,6 +52,9 @@ export const Header = ({classNameForBg}: {classNameForBg?: string}) => {
                   <About />
                   <Link href={"/careers"} className={`${CSS.link}`}>Careers</Link>
                   <Link href={"/contact"} className={`${CSS.link}`}>Contact Us</Link>
+                  <Link href="/contact#contactform" className={`text-black text-center font-bold p-2 rounded-full flex items-center justify-center w-[10rem] bg-yellow-500  hover:bg-opacity-90  `}>
+                      Request Service
+                  </Link>
                 </SheetHeader>
               </SheetContent>
             </Sheet>
