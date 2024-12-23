@@ -59,6 +59,7 @@ const ContactData = () => {
                         <th className='py-2 px-4 border-b'>Sr.No.</th>
                         <th className='py-2 px-4 border-b'>Name</th>
                         <th className='py-2 px-4 border-b'>Email</th>
+                        <th className='py-2 px-4 border-b'>Phone</th>
                         <th className='py-2 px-4 border-b'>Subject</th>
                         <th className='py-2 px-4 border-b'>Query</th>
                         <th className='py-2 px-4 border-b'>Submission Date</th>
@@ -71,6 +72,7 @@ const ContactData = () => {
                             <td className='py-2 px-4 border-b text-nowrap'>{index + 1}</td>
                             <td className='py-2 px-4 border-b text-nowrap'>{contact.name}</td>
                             <td className='py-2 px-4 border-b'>{contact.email}</td>
+                            <td className='py-2 px-4 border-b'>+{contact.phone}</td>
                             <td className='py-2 px-4 border-b'>{contact.subject}</td>
                             <td className='py-2 px-4 border-b'>{contact.query}</td>
                             <td className='py-2 px-4 border-b text-nowrap text-xs'>{new Date(contact.createdAt).toLocaleString()}</td>

@@ -80,8 +80,10 @@ export default function RootLayout({
                   zIndex: -1,
                }}
             />
-         <div className="w-full border flex flex-col md:flex-row md:p-16 md:pl-14 gap-14 relative items-center overflow-hidden ">
-           
+            <Link href="/contact#contactform" className={`text-black text-center fixed z-50 bottom-4 right-4 md:hidden font-bold p-2 rounded-full flex items-center justify-center w-[10rem] bg-yellow-400 hover:bg-opacity-90 shadow-lg  `}>
+             Request Service
+            </Link>
+         <div className="w-full border flex flex-col md:flex-row md:p-16 md:pl-14 gap-14 relative items-center overflow-hidden ">          
            <div className="flex flex-col my-10 ">
             <Logo className="text-3xl" size={50} gap="gap-x-1"/>
             <div className="pl-0">

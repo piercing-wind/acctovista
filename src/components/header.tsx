@@ -52,9 +52,6 @@ export const Header = ({classNameForBg}: {classNameForBg?: string}) => {
                   <About />
                   <Link href={"/careers"} className={`${CSS.link}`}>Careers</Link>
                   <Link href={"/contact"} className={`${CSS.link}`}>Contact Us</Link>
-                  <Link href="/contact#contactform" className={`text-black text-center font-bold p-2 rounded-full flex items-center justify-center w-[10rem] bg-yellow-500  hover:bg-opacity-90  `}>
-                      Request Service
-                  </Link>
                 </SheetHeader>
               </SheetContent>
             </Sheet>
