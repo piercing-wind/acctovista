@@ -106,9 +106,13 @@ const ContactForm = () => {
             country={'us'}
             value={formData.phone}
             onChange={phone => handleChange({ target: { name: 'phone', value: phone } })}
-            inputClass={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 ${
+            inputClass={`w-full border rounded-lg focus:outline-none focus:ring-2 ${
               errors.phone ? 'border-red-500' : 'border-gray-300'
             }`}
+            inputStyle={{ width: '100%', height: 'auto', padding: '0.75rem', paddingLeft: '4rem' }}
+
+     
+
           />
           {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
         </div>
