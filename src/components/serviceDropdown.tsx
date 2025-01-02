@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CSS from "@/components/header.module.css";
  import {
    DropdownMenu,
@@ -7,28 +7,36 @@ import CSS from "@/components/header.module.css";
    DropdownMenuGroup,
    DropdownMenuItem,
    DropdownMenuLabel,
-   DropdownMenuPortal,
    DropdownMenuSeparator,
-   DropdownMenuShortcut,
-   DropdownMenuSub,
-   DropdownMenuSubContent,
-   DropdownMenuSubTrigger,
    DropdownMenuTrigger,
  } from "@/components/ui/dropdown-menu"
-import { Divider, DividerPlain } from "./divider";
 import Link from "next/link";
 
 
 export const ServiceDropdown = ({className}:{className?:string}) => {
    const [isOpen, setIsOpen] = useState(false);
+   const ref = useRef<HTMLDivElement>(null);
+   useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+         if (ref.current && !ref.current.contains(event.target as Node)) {
+            setIsOpen(false);
+         }
+      }
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      }
+   },[])
+
    return ( 
       <DropdownMenu open={isOpen}>
       <DropdownMenuTrigger asChild aria-haspopup className="cursor-pointer"
         onMouseEnter={() => setIsOpen(true)}
+        // onMouseLeave={() => setIsOpen(false)}
       >
          <span className={`${CSS.link}${className}`} >Services</span>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className={`w-72 bg-black bg-opacity-50 text-white text-xs font-semibold border-transparent my-6`}
+      <DropdownMenuContent ref={ref} className={`w-72 bg-black bg-opacity-50 text-white text-xs font-semibold border-transparent my-6`}
          onMouseEnter={() => setIsOpen(true)}
          onMouseLeave={() => setIsOpen(false)}
       >
@@ -80,6 +88,18 @@ export const ServiceDropdown = ({className}:{className?:string}) => {
 
 export const About = ({className}:{className?:string}) => {
    const [isOpen, setIsOpen] = useState(false);
+   const ref = useRef<HTMLDivElement>(null);
+   useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+         if (ref.current && !ref.current.contains(event.target as Node)) {
+            setIsOpen(false);
+         }
+      }
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      }
+   },[])
    return ( 
       <DropdownMenu open={isOpen}>
       <DropdownMenuTrigger asChild aria-haspopup className="cursor-pointer"
@@ -87,7 +107,7 @@ export const About = ({className}:{className?:string}) => {
       >
          <span className={`${CSS.link}${className}`} >About</span>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className={`w-56 items-center flex flex-col justify-center bg-black bg-opacity-50 text-white text-xs font-semibold border-transparent my-6`}
+      <DropdownMenuContent ref={ref} className={`w-56 items-center flex flex-col justify-center bg-black bg-opacity-50 text-white text-xs font-semibold border-transparent my-6`}
          onMouseEnter={() => setIsOpen(true)}
          onMouseLeave={() => setIsOpen(false)}
       >

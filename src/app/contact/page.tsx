@@ -22,7 +22,7 @@ export default function Page() {
       </div>
 
       <div className="w-[95%] md:w-[80%] mx-auto flex flex-wrap md:flex-nowrap justify-center py-12 mt-4 gap-4">
-         <div>
+         {/* <div>
             <div className="max-w-xl flex flex-col gap-4 p-8 md:max-h-[40vmin]  justify-center shadow-md rounded-md">
                <h2 className="text-xl font-semibold w-full text-center py-2">Business Details</h2>            
                <h3><span className="font-semibold">Legal Name</span> : Acctovista Consulting LLP</h3>
@@ -31,7 +31,7 @@ export default function Page() {
                <h3><span className="font-semibold">Phone</span> : +91 79866-67336</h3>
                <h3><span className="font-semibold">GSTIN</span> : 03ACGFA6754R1ZW</h3>
             </div>
-         </div>
+         </div> */}
             <ContactForm/>
       </div>
       </>);

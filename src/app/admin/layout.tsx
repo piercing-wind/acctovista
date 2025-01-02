@@ -7,7 +7,6 @@ import Image from "next/image";
 import { FaceBook, Instagram, Linkdin, Youtube } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { FooterServiceList } from "@/components/footerServiceLink";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -26,8 +25,8 @@ export const metadata: Metadata = {
    creator: "Sourabh",
    publisher: "Acctovista",
    robots: {
-     index: true,
-     follow: true,
+     index: false,
+     follow: false,
    },
    alternates: { canonical: "/" },
    twitter:{
@@ -69,19 +68,6 @@ export default function RootLayout({
   return (
 
     <html lang="en"  className="w-full hide_scrollbar">
-      <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11529014251"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11529014251');
-            `,
-          }}
-        />
-      </Head>
       <body className={cn("hide_scrollbar",inter.className)} >
          {children}
          <div className="w-full relative flex flex-col overflow-x-hidden">
@@ -94,9 +80,7 @@ export default function RootLayout({
                   zIndex: -1,
                }}
             />
-            <Link href="/contact#contactform" className={`text-black text-center fixed z-50 bottom-4 right-4 md:hidden font-bold p-2 rounded-full flex items-center justify-center w-[10rem] bg-yellow-400 hover:bg-opacity-90 shadow-lg  `}>
-             Request Service
-            </Link>
+ 
          <div className="w-full border flex flex-col md:flex-row md:p-16 md:pl-14 gap-14 relative items-center overflow-hidden ">          
            <div className="flex flex-col my-10 ">
             <Logo className="text-3xl" size={50} gap="gap-x-1"/>

@@ -1,9 +1,12 @@
 'use client'
 import { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 interface FormData {
   name: string;
   email: string;
+  phone: string;
   subject: string;
   message: string;
 }
@@ -12,6 +15,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     message: '',
   });
@@ -19,7 +23,7 @@ const ContactForm = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>  | { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -28,6 +32,7 @@ const ContactForm = () => {
     const newErrors: Partial<FormData> = {};
     if (!formData.name) newErrors.name = 'Name is required';
     if (!formData.email) newErrors.email = 'Email is required';
+    if (!formData.phone) newErrors.phone = 'Phone is required';
     if (!formData.subject) newErrors.subject = 'Subject is required';
     if (!formData.message) newErrors.message = 'Message is required';
     setErrors(newErrors);
@@ -37,9 +42,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-
     // Submit form data
-    console.log('Form submitted:', formData);
     const res = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/contact`,{
       method : "POST",
       headers : {
@@ -49,15 +52,18 @@ const ContactForm = () => {
       body : JSON.stringify({
          name : formData.name,
          email : formData.email,
+         phone : formData.phone,
          subject : formData.subject,
          query : formData.message
       })
     })
+    
     if(res.status === 201) setSubmitted(true);
+    else alert("Failed to submit the form. Please try again later.");
   };
 
   return (
-    <div className="flex justify-center items-center flex-shrink-0 max-w-2xl w-full">
+    <div  id="contactform" className="flex justify-center items-center flex-shrink-0 max-w-2xl w-full">
       {submitted ? (
         <div className="text-center text-green-500">
           <p>Thank you for your message!</p>
@@ -93,6 +99,22 @@ const ContactForm = () => {
             }`}
           />
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+        </div>
+        <div className="mb-4">
+          <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">Phone</label>
+          <PhoneInput
+            country={'us'}
+            value={formData.phone}
+            onChange={phone => handleChange({ target: { name: 'phone', value: phone } })}
+            inputClass={`w-full border rounded-lg focus:outline-none focus:ring-2 ${
+              errors.phone ? 'border-red-500' : 'border-gray-300'
+            }`}
+            inputStyle={{ width: '100%', height: 'auto', padding: '0.75rem', paddingLeft: '4rem' }}
+
+     
+
+          />
+          {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
         </div>
         <div className="mb-4">
           <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>

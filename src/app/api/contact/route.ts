@@ -8,11 +8,11 @@ export async function POST(req : Request){
    if(header !== process.env.NEXT_PUBLIC_ACCTOVISTA_KEY){
         return NextResponse.json({message: "Unauthorized, You are not allowed to access this route."})
    }
-  const {name, email, subject, query} = await req.json()
+  const {name, email, phone, subject, query} = await req.json()
   
   connectToMongoDB()
   try {
-     await Contact.create({ name, email, subject, query});
+     await Contact.create({ name, email,phone, subject, query});
    } catch (error) {
      console.error('Error Storing the Contact data:', error);
      return NextResponse.json({message: "Error Storing the Contact data", error})
@@ -42,6 +42,7 @@ export async function GET(req: Request) {
        currentPage: page
    });
 }
+
 export async function DELETE(req : Request){
    const header = req.headers.get("acctovista") 
    if(header !== process.env.NEXT_PUBLIC_ACCTOVISTA_KEY){
