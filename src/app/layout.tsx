@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import { Logo } from "@/components/logo";
 import Link from "next/link";
 import Image from "next/image";
