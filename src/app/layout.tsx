@@ -8,9 +8,10 @@ import { FaceBook, Instagram, Linkdin, Youtube } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { FooterServiceList } from "@/components/footerServiceLink";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
 
 
-const inter = Inter({ subsets: ["latin"] });
+   const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
    title: "Acctovitsa Consulting LLP",
    metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL || "https://acctovista.com"),
@@ -173,6 +174,28 @@ export default function RootLayout({
             <span className="flex mx-auto text-sm sourabh">Acctovista Consulting LLP &#9400; 2024</span>    
             <span className="mb-2 flex mx-auto text-xs">All rights Reserved</span>    
        </div> 
+       <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1991783721336679');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img height="1" width="1" style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1991783721336679&ev=PageView&noscript=1" />
+        </noscript>
       </body>
     </html>
   );
