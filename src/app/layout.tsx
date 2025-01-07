@@ -160,14 +160,14 @@ export default function RootLayout({
                      </div>
                         
                   </div>
-                  <div className="opacity-80 my-10 flex">
+                  {/* <div className="opacity-80 my-10 flex">
                      <span className="font-semibold text-nowrap">Branch Office: </span>
                      <div className="px-2">
                         <p className="text-sm">Building 10-B-36,</p>
                         <p className="text-sm text-nowrap ">Tilak Nagar, Bhilwara-311001,</p>
                         <p className="text-sm text-nowrap ">Rajasthan, India. </p>
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
          </div>  
