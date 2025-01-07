@@ -192,7 +192,7 @@ export const TeamChart=()=>{
              height={windowWidth < 500 ? 150 : 200}
              className={cn("cursor-pointer absolute -right-[7.5rem] lg:-right-[8.5rem] top-1", currentService === "Accounting" ? "scale-125" : "hover:scale-105")}
             onClick={()=>{
-               setActiveIndex(()=>[4,2]); 
+               setActiveIndex(()=>[4]); 
                setCurrentService("Accounting");
                }}
           />
@@ -235,7 +235,7 @@ export const TeamChart=()=>{
             width={windowWidth < 500 ? 150 : 200}
             height={windowWidth < 500 ? 150 : 200}
             className={cn("cursor-pointer absolute -right-[7.5rem] lg:-right-[8.5rem] top-1", currentService === "Audit" ? "scale-125" : "hover:scale-105")}
-            onClick={()=>{setActiveIndex(()=>[2,3]);
+            onClick={()=>{setActiveIndex(()=>[3]);
                setCurrentService("Audit ");
             }
             }
