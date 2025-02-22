@@ -107,12 +107,12 @@ export const TeamChart=()=>{
 
     const teamMembers : TeamMemberProps[]=[
       {
-         name: "Sourabh Sharma, IT Director",
+         name: "Our Team",
          role : "Managing Partner and Team Lead- ITES at AcctoVista",
          skills : "ITES-related Services, Software Development, AI Technology, Real-time Data Analytics, Automation",
-         experience : "Sourabh holds a bachelor’s degree in computer applications and various certifications in his technology field. Throughout his career, he has developed numerous software solutions, demonstrating exceptional skills in overcoming complex obstacles that can hinder business progress. His expertise in AI and computer technology is invaluable for helping businesses run smoothly and stay ahead of their competitors.",
-         achievements : "Sourabh's presence at AcctoVista has significantly contributed to automating manual tasks, reducing both time and costs through AI and software development. He provides real-time data analytics to business owners, enabling them to anticipate changes and make informed decisions for better outcomes.",
-         job : "As a Managing Partner and Team Lead, Sourabh oversees all ITES-related services, ensuring the implementation of cutting-edge technology solutions that enhance business operations. His leadership and technological expertise drive innovation and efficiency at AcctoVista, ensuring clients receive top-tier service."
+         experience : "Our team has extensive experience in developing numerous software solutions, demonstrating exceptional skills in overcoming complex obstacles that can hinder business progress. Their expertise in AI and computer technology is invaluable for helping businesses run smoothly and stay ahead of their competitors.",
+         achievements : "Our team's presence at AcctoVista has significantly contributed to automating manual tasks, reducing both time and costs through AI and software development. They provide real-time data analytics to business owners, enabling them to anticipate changes and make informed decisions for better outcomes.",
+         job : "As Managing Partner and Team Lead, our team oversees all ITES-related services, ensuring the implementation of cutting-edge technology solutions that enhance business operations. Their leadership and technological expertise drive innovation and efficiency at AcctoVista, ensuring clients receive top-tier service."
       },
       {
          name: "CA Akhil Aggarwal",
